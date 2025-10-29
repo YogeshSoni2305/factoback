@@ -13,7 +13,7 @@ init()  # Initialize colorama
 class ClaimFighter:
     def __init__(self):
         load_dotenv("api.key")
-        self.groq_key = os.getenv("GROQ_API_KEY")
+        self.groq_key = os.getenv("GROQ_API_KEY") 
         self.gemini_key = os.getenv("GEMINI_API_KEY")
         self.tavily_key = os.getenv("TAVILY_API_KEY")
         if not self.groq_key or not self.gemini_key or not self.tavily_key:
