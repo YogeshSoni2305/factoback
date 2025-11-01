@@ -10,7 +10,7 @@ import warnings
 import asyncio
 import json
 from pathlib import Path
-from config import RESULT_DIR, BASE_DIR
+from config import *
 
 warnings.filterwarnings("ignore")
 init()
@@ -33,7 +33,7 @@ TRUSTED_SOURCES = [
 
 class ClaimFighter:
     def __init__(self):
-        load_dotenv("api.key")
+        load_dotenv()
 
         # Load API keys from environment (no hardcoded fallbacks)
         self.groq_key = os.getenv("GROQ_API_KEY")

@@ -9,8 +9,8 @@
     "gemini_response": {
         "verdict": "Unverifiable",
         "confidence": 0.75,
-        "conclusion": "The claim uses subjective language (\"panic mode\") that is difficult to verify. While official sources may not reflect the full picture, the absence of quantifiable evidence or reliable sources indicating widespread panic makes the claim unverifiable.",
-        "evidence_summary": "Lack of quantifiable evidence for \"panic mode\" and reliance on potentially biased official statements."
+        "conclusion": "The claim uses subjective language (\"panic mode\") that is difficult to verify. While there's evidence of concern and defensive measures, it doesn't definitively equate to panic. Therefore, the claim is unverifiable.",
+        "evidence_summary": "Subjective characterization lacks concrete evidence like explicit data or quotes indicating a state of panic."
     },
     "tavily_sources": [
         {
@@ -20,16 +20,22 @@
             "snippet": "China is the United States' third-largest trading partner after Mexico and Canada, and tariffs on Chinese imports currently stand at 30%. Earlier this month, President Trump threatened an additional 100% tariff on Chinese imports by early November in a significant escalation in the U.S.-China trade ..."
         },
         {
-            "title": "Zhihua Ye: China’s export controls are proper reactions to discriminatory U.S. actions - Chicago Tribune",
-            "url": "https://www.chicagotribune.com/2025/10/27/opinion-china-us-donald-trump-xi-jinping-tariffs-exports/",
-            "score": 0.41,
-            "snippet": "Upheaval is threatening the stabilizing course of China-U.S. relations. On Oct. 10, U.S. President Donald Trump published an unusually long post on Truth Social, threatening to impose 100% tariffs on all Chinese products and restrict China-bound exports of critical software starting Nov. 1, in retal..."
-        },
-        {
             "title": "The US Is Losing The Trade War With China - CleanTechnica",
             "url": "https://cleantechnica.com/2025/10/30/the-us-is-losing-the-trade-war-with-china/",
             "score": 0.35,
             "snippet": "“For the US, it will be disturbing the extent to which China was able to divert US-bound exports to other mainly Asian markets once the US tariffs struck. Those who predicted China would spill into a crisis will have been sobered by a stock market that has risen by 34% in dollar terms, double the ri..."
+        },
+        {
+            "title": "Trump-Xi Meeting: Why Experts Say China Came Out Ahead - Forbes",
+            "url": "https://www.forbes.com/sites/saradorn/2025/10/30/trump-xi-meeting-why-experts-say-china-came-out-ahead/",
+            "score": 0.34,
+            "snippet": "China, meanwhile, agreed to extend for one year a pause on export controls of rare earth minerals that were in response to Trump’s tariffs, though Trump acknowledged the deal would need to be renegotiated when the year is up.\n\nBy leveraging its monopoly on rare earths, China “successfully orchestrat..."
+        },
+        {
+            "title": "US and China have reached a framework agreement on trade ahead of Trump-Xi meeting. Here’s what we know - CNN",
+            "url": "https://www.cnn.com/2025/10/27/business/us-china-trade-talk-malaysia-intl-hnk",
+            "score": 0.32,
+            "snippet": "Frictions between the two countries ratcheted up swiftly in September after the US expanded its export blacklist to hit significantly more Chinese companies’ access to American technology, while China ramped up its own export controls on rare earth minerals.\n\nBeijing’s expansion of restriction on th..."
         },
         {
             "title": "Xi-Trump meeting sparks optimism in China amid hope for lower tariffs and a 'honeymoon' in ties - CNBC",
@@ -38,16 +44,10 @@
             "snippet": "\"Trump [has been] overly confident. He doesn't listen,\" Xu said, referring to the U.S. president's focus on ramping up tariffs.\n\n\"If the U.S. and China are in a mess, can the U.S. become great again?\" he said. \"No way.\" [...] \"Each side lowering tariffs to below 10% would benefit capital flows and c..."
         },
         {
-            "title": "'Framework' in place for substantial trade deal with China, Scott Bessent says - Politico",
-            "url": "https://www.politico.com/news/2025/10/26/framework-in-place-for-substantial-trade-deal-with-china-scott-bessent-says-00623091",
-            "score": 0.29,
-            "snippet": "Speaking on CBS’ “Face the Nation,” Bessent said that the threat of 100 percent tariffs imposed on China had made it possible for the Trump administration to get what it wanted in negotiations.\n\n“President Trump, to give me and the trade team leverage, decided that it would be a good idea for him to..."
-        },
-        {
-            "title": "Bessent says US, China reach framework deal on rare earths, Trump's tariff threat -NBC interview - Reuters",
-            "url": "https://www.reuters.com/world/china/bessent-says-us-china-reach-framework-deal-rare-earths-trumps-tariff-threat-nbc-2025-10-26/",
-            "score": 0.28,
-            "snippet": "Reuters, the news and media division of Thomson Reuters, is the world’s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, in..."
+            "title": "Trump Shaves China Tariffs After ‘Amazing’ Xi Meeting - The Business of Fashion",
+            "url": "https://www.businessoffashion.com/news/retail/trump-shaves-china-tariffs-after-amazing-xi-meeting/",
+            "score": 0.31,
+            "snippet": "Trump said that tariffs on Chinese imports would be cut to 47 percent from around 57 percent by halving the rate of levies related to trade in fentanyl precursor chemicals to 10 percent from 20 percent. [...] “It’s very clear that rare earths is the primary piece of leverage, the ace in the hole tha..."
         }
     ]
 }

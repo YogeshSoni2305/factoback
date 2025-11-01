@@ -37,7 +37,7 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
-
+API_KEY=os.getenv("API_KEY")
 # Optional: print or check keys (for debugging)
 if not all([GEMINI_API_KEY, GROQ_API_KEY, TAVILY_API_KEY]):
     raise ValueError("Missing required API keys. Please set them in .env or environment variables.")
