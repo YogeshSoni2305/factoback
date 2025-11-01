@@ -1,26 +1,160 @@
+# from flask import Flask, render_template, request,jsonify
+# import os
+# import json
+# from werkzeug.utils import secure_filename
+# from fighter import ClaimFighter
 
-from flask import Flask, render_template, request, redirect, url_for
+# from config import FLASK_UPLOAD_FOLDER, FLASK_STATIC_FOLDER
+# app = Flask(__name__, static_folder=FLASK_STATIC_FOLDER)
+# app.config['UPLOAD_FOLDER'] = FLASK_UPLOAD_FOLDER
+
+
+
+# app.config['UPLOAD_FOLDER'] = 'uploads'
+# app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
+
+# # Ensure upload directory exists
+# os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
+
+
+# @app.route('/explore')
+# def explore():
+#     return render_template('upload.html')
+
+
+# @app.route('/process', methods=['POST'])
+# def process_upload():
+#     results = {}
+
+#     # ---- Handle file uploads ----
+#     file_types = ['image', 'video', 'audio']
+#     for file_type in file_types:
+#         if file_type in request.files and request.files[file_type].filename:
+#             file = request.files[file_type]
+#             filename = secure_filename(file.filename)
+#             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+#             file.save(file_path)
+#             results[file_type] = file_path
+#         else:
+#             results[file_type] = None
+
+#     # ---- Handle text and URL inputs ----
+#     results['text'] = request.form.get('user-text', '') or None
+#     results['url'] = request.form.get('url', '') or None
+
+#     print("Processing inputs:", results)
+
+#     # ---- Run ClaimFighter ----
+#     fighter = ClaimFighter()
+#     fighter.run(results)
+
+#     # ---- Extract Gemini + Tavily output ----
+#     output_path = "/home/yogesh/facto3/factoback/news_verification/output.json"
+#     processed_path = "/home/yogesh/facto3/factoback/news_verification/processed_output.json"
+
+#     try:
+#         with open(output_path, 'r', encoding='utf-8') as file:
+#             data = json.load(file)
+
+#         claim_data = data.get("claim0", {})
+#         gemini_response = claim_data.get("gemini_response", {})
+#         tavily_sources = claim_data.get("tavily_sources", [])
+
+#         extracted = {
+#             "inputs": results,
+#             "gemini_response": gemini_response,
+#             "tavily_sources": tavily_sources
+#         }
+
+#         # ---- Save extracted info to new JSON file ----
+#         with open(processed_path, 'w', encoding='utf-8') as outfile:
+#             json.dump(extracted, outfile, indent=4, ensure_ascii=False)
+
+#         print(f"✅ Processed output saved to: {processed_path}")
+
+#         return jsonify({
+#             "status": "success",
+#             "message": "Processing complete",
+#             "data": extracted
+#         })
+
+#     except Exception as e:
+#         print(f"❌ Error extracting data: {e}")
+#         return jsonify({
+#             "status": "error",
+#             "message": str(e)
+#         }), 500
+
+
+
+# @app.route('/knowledge_graph')
+# def knowledge_graph():
+#     try:
+#         with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+#             output = json.load(file)
+#     except Exception as e:
+#         print(f"Error: {str(e)}")
+#         return None
+
+#     return render_template('knowledge_graph.html', output=output)
+
+
+# @app.route('/chat')
+# def chat():
+#     try:
+#         with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+#             output = json.load(file)
+#     except Exception as e:
+#         print(f"Error: {str(e)}")
+#         return None
+
+#     return render_template('chat.html', output=output)
+
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+
+from flask import Flask, render_template, request, jsonify
 import os
+import json
 from werkzeug.utils import secure_filename
 from fighter import ClaimFighter
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+from config import (
+    FLASK_UPLOAD_FOLDER,
+    FLASK_STATIC_FOLDER,
+    OUTPUT_JSON_PATH,
+    PROCESSED_JSON_PATH
+)
+
+app = Flask(__name__, static_folder=FLASK_STATIC_FOLDER)
+app.config['UPLOAD_FOLDER'] = FLASK_UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
+
 # Ensure upload directory exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+ return render_template('index.html')
+
 
 @app.route('/explore')
 def explore():
     return render_template('upload.html')
 
+
 @app.route('/process', methods=['POST'])
 def process_upload():
     results = {}
-    # Handle file uploads
+
+    # ---- Handle file uploads ----
     file_types = ['image', 'video', 'audio']
     for file_type in file_types:
         if file_type in request.files and request.files[file_type].filename:
@@ -31,46 +165,76 @@ def process_upload():
             results[file_type] = file_path
         else:
             results[file_type] = None
-    
-    # Handle direct text entry (alternative to file upload)
-    user_text = request.form.get('user-text', '')
-    if user_text:
-        results['text'] = user_text
-    else:
-        results['text'] = None
-    # Handle URL input
-    url = request.form.get('url', '')
-    results['url'] = url if url else None
-    print(results)
+
+    # ---- Handle text and URL inputs ----
+    results['text'] = request.form.get('user-text', '') or None
+    results['url'] = request.form.get('url', '') or None
+
+    print("Processing inputs:", results)
+
+    # ---- Run ClaimFighter ----
     fighter = ClaimFighter()
     fighter.run(results)
-    return render_template('upload.html', results=results)
+
+    # ---- Extract Gemini + Tavily output ----
+    try:
+        with open(OUTPUT_JSON_PATH, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+
+        claim_data = data.get("claim0", {})
+        gemini_response = claim_data.get("gemini_response", {})
+        tavily_sources = claim_data.get("tavily_sources", [])
+
+        extracted = {
+            "inputs": results,
+            "gemini_response": gemini_response,
+            "tavily_sources": tavily_sources
+        }
+
+        # ---- Save extracted info to new JSON file ----
+        with open(PROCESSED_JSON_PATH, 'w', encoding='utf-8') as outfile:
+            json.dump(extracted, outfile, indent=4, ensure_ascii=False)
+
+        print(f"✅ Processed output saved to: {PROCESSED_JSON_PATH}")
+
+        return jsonify({
+            "status": "success",
+            "message": "Processing complete",
+            "data": extracted
+        })
+
+    except Exception as e:
+        print(f"❌ Error extracting data: {e}")
+        return jsonify({
+            "status": "error",
+            "message": str(e)
+        }), 500
+
 
 @app.route('/knowledge_graph')
 def knowledge_graph():
-    import json
     try:
-        with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+        with open(OUTPUT_JSON_PATH, 'r', encoding='utf-8') as file:
             output = json.load(file)
     except Exception as e:
-        print(f"Error: {str(e)}")
-        return None
-    if output:
-        print("Successfully loaded JSON data into dictionary")
-    return render_template('knowledge_graph.html',output=output)
+        print(f"Error loading output.json: {e}")
+        return jsonify({"error": str(e)}), 500
+
+    return render_template('knowledge_graph.html', output=output)
+
 
 @app.route('/chat')
 def chat():
-    import json
     try:
-        with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+        with open(OUTPUT_JSON_PATH, 'r', encoding='utf-8') as file:
             output = json.load(file)
     except Exception as e:
-        print(f"Error: {str(e)}")
-        return None
-    if output:
-        print("Successfully loaded JSON data into dictionary")
-    return render_template('chat.html',output=output)
+        print(f"Error loading output.json: {e}")
+        return jsonify({"error": str(e)}), 500
+
+    return render_template('chat.html', output=output)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
