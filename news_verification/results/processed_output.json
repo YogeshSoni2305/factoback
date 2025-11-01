@@ -1,6 +1,6 @@
 {
     "inputs": {
-        "image": "D:\\facto3\\factoback\\news_verification\\uploads\\image.png",
+        "image": "/workspaces/factoback/news_verification/uploads/image.png",
         "video": null,
         "audio": null,
         "text": null,
@@ -9,8 +9,8 @@
     "gemini_response": {
         "verdict": "Unverifiable",
         "confidence": 0.75,
-        "conclusion": "The claim uses subjective language (\"panic mode\") that is not supported by authoritative sources. While distress might be inferred, no direct evidence confirms China's state as such, making the claim unverifiable.",
-        "evidence_summary": "The claim relies on subjective interpretation without explicit, quantifiable data to support the assertion of a \"panic mode.\"" 
+        "conclusion": "The claim uses subjective language (\"panic mode\") that is difficult to verify. While official sources may not reflect the full picture, the absence of quantifiable evidence or reliable sources indicating widespread panic makes the claim unverifiable.",
+        "evidence_summary": "Lack of quantifiable evidence for \"panic mode\" and reliance on potentially biased official statements."
     },
     "tavily_sources": [
         {

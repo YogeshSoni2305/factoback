@@ -1,23 +1,23 @@
 {
     "inputs": {
-        "image": "D:\\facto3\\factoback\\news_verification\\uploads\\image.png",
+        "image": "/workspaces/factoback/news_verification/uploads/image.png",
         "video": null,
         "audio": null,
         "text": null,
         "url": null
     },
     "descr": {
-        "image": "The image is a thumbnail for a news report or video, with a bold red and black background that is typical of sensationalized headlines. The top of the image features large white text on a black background that reads \"China in a Panic Mode!!\". Below this, on a bright red background, is more white text: \"Amidst Trump's Tariff, China to dump goods into India.\".\n\nBeneath the red section, there's a thinner white bar with black text that says \"Commerce Secretary to throttle China's Strategy\".\n\nThe lower portion of the image is a collage of different elements. On the left, there is a partial image of Chinese President Xi Jinping with his eyes closed and his hand touching his forehead, seemingly stressed. Behind him, a large Chinese flag is visible.\n\nIn the center, a man with a beard and wearing a black polo shirt is shown from the chest up. He has his arms crossed and is looking directly at the viewer. There is a small logo on his shirt that appears to be for \"Unacademy\".\n\nOn the right side of the image, a man with white hair and glasses, wearing a dark vest over a white shirt, is also shown from the chest up. He is looking slightly off to the side.\n\nThe background behind these men is a stylized illustration featuring a blue sky, a yellow landmass with an Indian emblem on it, and several shipping containers. A silhouette of a person with a hat and binoculars is looking out from the yellow landmass towards the containers, perhaps symbolizing observation or strategy.\n\nThe overall impression is one of geopolitical tension and economic conflict, with the headline suggesting China is in trouble due to US tariffs and is looking to India as an outlet for its goods, while India's Commerce Secretary is reportedly working to counter this strategy."
+        "image": "The image is a thumbnail for a news or commentary video, with a bright red background at the top featuring large white text. The text reads \"China in a Panic Mode!!\" on the first line, and \"Amidst Trump's Tariff, China to dump goods into India.\" on the subsequent lines. Below this, on a lighter colored background, is a smaller line of text that states \"Commerce Secretary to throttle China's Strategy\".\n\nThe bottom half of the image is a collage of three distinct elements. On the left, there is a picture of Xi Jinping, the President of China, with his eyes closed and his hand on his forehead, suggesting stress or deep thought. Behind him, a portion of the Chinese flag is visible. In the center, there is an illustration of a person in an orange coat and a hat looking through a telescope towards a landscape of shipping containers. To the right of this illustration, a man with a beard and wearing a black polo shirt with a logo is shown. On the far right, there is a close-up portrait of an older man with white hair and glasses, looking directly at the camera. The background behind these figures appears to be a simplified landscape with a blue sky and some stylized elements that could represent trade or industry. A small Indian flag symbol is also visible in the bottom right corner of the illustrative section. The bottom right corner also has a watermark with dimensions \"686 x 386\"."
     },
     "claim0": {
         "claim": "China is in a panic mode amidst Trump's tariff.",
-        "deepseek_response": ": Unverifiable  \nReasoning: The phrase “in a panic mode” is subjective and not documented in credible reports; Chinese officials and major news outlets described China’s response to Trump’s tariffs as measured and strategic rather than panicked. No authoritative source characterizes the nation’s stance in those terms.  \nSources: Reuters coverage of China‑U.S. trade talks (2020); Bloomberg analysis of Chinese trade policy response.",
-        "llama_response": "Critique:\nThe claim relies heavily on perception, which is subjective and potentially biased. While it's true Chinese officials are measured in statements, 'measured' and 'strategic' could still imply a certain level of distress. A more nuanced analysis of Chinese policy decisions would provide a more accurate assessment of their stance.\n\nMain weakness: Subjective interpretation without explicit, quantifiable data.",
+        "deepseek_response": ": Unverifiable  \nReasoning: The phrase “panic mode” is subjective and not supported by concrete evidence; Chinese officials publicly framed the tariffs as a negotiation issue and outlined counter‑measures rather than expressing panic. No reputable source quantifies national panic.  \nSources: Reuters coverage of China‑US trade talks (2023); Bloomberg analysis of China’s tariff response.",
+        "llama_response": "Critique: While the opponent presents a valid point about the subjective nature of \"panic mode,\" it's unclear if the analysis relies solely on the official statements, potentially underestimating unpublicized government and private sector reactions.",
         "gemini_response": {
             "verdict": "Unverifiable",
             "confidence": 0.75,
-            "conclusion": "The claim uses subjective language (\"panic mode\") that is not supported by authoritative sources. While distress might be inferred, no direct evidence confirms China's state as such, making the claim unverifiable.",
-            "evidence_summary": "The claim relies on subjective interpretation without explicit, quantifiable data to support the assertion of a \"panic mode.\""
+            "conclusion": "The claim uses subjective language (\"panic mode\") that is difficult to verify. While official sources may not reflect the full picture, the absence of quantifiable evidence or reliable sources indicating widespread panic makes the claim unverifiable.",
+            "evidence_summary": "Lack of quantifiable evidence for \"panic mode\" and reliance on potentially biased official statements."
         },
         "tavily_sources": [
             {
@@ -57,109 +57,109 @@
                 "snippet": "Reuters, the news and media division of Thomson Reuters, is the world’s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, in..."
             }
         ],
-        "final_conclusion": "The claim uses subjective language (\"panic mode\") that is not supported by authoritative sources. While distress might be inferred, no direct evidence confirms China's state as such, making the claim unverifiable.",
+        "final_conclusion": "The claim uses subjective language (\"panic mode\") that is difficult to verify. While official sources may not reflect the full picture, the absence of quantifiable evidence or reliable sources indicating widespread panic makes the claim unverifiable.",
         "confidence": 0.75
     },
     "claim1": {
-        "claim": "China plans to dump goods into India due to Trump's tariff.",
-        "deepseek_response": ": False  \nReasoning: No credible reports or official statements indicate that China intends to “dump” goods into India as a reaction to U.S. tariffs imposed by former President Trump. Trade policies between China and India are discussed separately, and “dumping” would violate WTO rules, which would be publicly noted.  \nSources: WTO dispute database; Reuters coverage of China‑India trade (2020‑2024).",
-        "llama_response": "Critique:\nThe rebuttal overreaches by mentioning WTO rules. While it's true China would need to comply with international trade regulations, it doesn't directly address the claim. The main issue is if China would indeed redirect goods to India due to U.S. tariffs, not the legality of such action.",
-        "gemini_response": {
-            "verdict": "False",
-            "confidence": 0.95,
-            "conclusion": "No credible reports support the claim that China plans to dump goods into India due to Trump's tariffs. Trade relations are handled separately, and such dumping would likely be noted publicly due to WTO regulations.",
-            "evidence_summary": "No reports indicate China intends to dump goods into India because of U.S. tariffs. WTO rules also discourage dumping."
-        },
-        "tavily_sources": [
-            {
-                "title": "Trump Tariff Revenue for Fiscal Year Soars - Newsweek",
-                "url": "https://www.newsweek.com/trump-tariff-revenue-fiscal-year-2025-soars-10948543",
-                "score": 0.23,
-                "snippet": "The Trump administration invoked the International Emergency Economic Powers Act, a 1977 law known as IEEPA, to place global tariffs of 10 percent on all imports, as well as higher tariffs on specific countries and goods. The tariffs have raised billions in new revenue. They've also sparked a trade ..."
-            },
-            {
-                "title": "US and China have reached a framework agreement on trade ahead of Trump-Xi meeting. Here’s what we know - CNN",
-                "url": "https://www.cnn.com/2025/10/27/business/us-china-trade-talk-malaysia-intl-hnk",
-                "score": 0.22,
-                "snippet": "US and Chinese officials have reached a framework agreement, averting a potentially ruinous 157% tariff on Chinese goods while paving the way for a potential trade deal to be discussed between President Donald Trump and Chinese leader Xi Jinping later this week.\n\nThe apparent progress came during th..."
-            },
-            {
-                "title": "US and China agree on trade framework for rare earths, soybeans - France 24",
-                "url": "https://www.france24.com/en/americas/20251026-us-china-agree-trade-framework-rare-earths-soybeans",
-                "score": 0.22,
-                "snippet": "That has prompted the Trump administration to consider a block on software-powered exports to China, from laptops to jet engines, according to a Reuters report.\n\n(FRANCE 24 with Reuters)\n\nAdvertising\n\nKeywords for this article\n\n USA\n China\n Donald Trump\n Trade\n trade war\n tariffs\n exports\n Agricultu..."
-            },
-            {
-                "title": "'Framework' in place for substantial trade deal with China, Scott Bessent says - Politico",
-                "url": "https://www.politico.com/news/2025/10/26/framework-in-place-for-substantial-trade-deal-with-china-scott-bessent-says-00623091",
-                "score": 0.2,
-                "snippet": "Speaking on CBS’ “Face the Nation,” Bessent said that the threat of 100 percent tariffs imposed on China had made it possible for the Trump administration to get what it wanted in negotiations.\n\n“President Trump, to give me and the trade team leverage, decided that it would be a good idea for him to..."
-            },
-            {
-                "title": "China Reacts to Trump’s Nuclear Weapons Tests Order - Newsweek",
-                "url": "https://www.newsweek.com/china-reacts-to-trumps-nuclear-weapons-tests-order-10963843",
-                "score": 0.2,
-                "snippet": "WorldChina and Russia Push India Out of Air Base in Backyard: Reports\n\n3 min read\n\nU.S.Microsoft Outlook, Minecraft and Xbox Cloud Gaming Down\n\n4 min read\n\nWorldOver 460 Executed in Cold-Blooded Atrocity at Sudan Hospital: Report\n\n5 min read\n\n## Related Podcasts\n\n## Top Stories\n\nNewsHurricane Meliss..."
-            },
-            {
-                "title": "Trump and Xi agree to a one-year trade truce — but key details remain unclear - Politico",
-                "url": "https://www.politico.com/news/2025/10/30/trump-and-xi-agree-to-a-one-year-trade-truce-but-key-details-remain-unclear-00629760",
-                "score": 0.2,
-                "snippet": "Trump said the U.S. will immediately reduce the tariffs it imposed on China earlier this year because of its role in supplying precursors that have fueled the fentanyl epidemic in the U.S. from 20 percent to 10 percent, in response to China’s assurances that it will crack down on those precursors.\n\n..."
-            }
-        ],
-        "final_conclusion": "No credible reports support the claim that China plans to dump goods into India due to Trump's tariffs. Trade relations are handled separately, and such dumping would likely be noted publicly due to WTO regulations.",
-        "confidence": 0.95
-    },
-    "claim2": {
-        "claim": "India's Commerce Secretary is working to throttle China's strategy.",
-        "deepseek_response": ": Unverifiable  \nReasoning: No widely reported, verifiable statement from India’s Commerce Secretary explicitly describing efforts to “throttle China’s strategy.” Media coverage mentions India’s broader moves to limit Chinese imports, but the specific quote or policy attribution to the Commerce Secretary cannot be confirmed.  \nSources: Reuters India‑China trade coverage (2023‑2024); Ministry of Commerce press releases (no direct statement).",
-        "llama_response": "Critique:\nThe opponent's reasoning is too strict; the claim isn't made about India taking a single direct quote or action, but possibly broader statements or actions through the Secretary. The opponent focuses too much on lack of a direct attribution and doesn't consider indirect ways the Secretary might be \"working\" to counter China.",
+        "claim": "China will dump goods into India.",
+        "deepseek_response": ": Unverifiable  \nReasoning: No concrete evidence or official statements confirm that China has a planned policy to dump goods into India; reports discuss occasional dumping investigations (e.g., steel, solar panels) but these are case‑by‑case and do not indicate a systematic future “dumping” strategy.  \nSources: Ministry of Commerce (India) anti‑dumping notices; Reuters articles on China‑India trade disputes (2023‑2024).",
+        "llama_response": "Critique: The opponent highlights a lack of concrete evidence, but the claim might still be indirectly supported by India's increasing imports from China in recent years and ongoing trade disputes, which could indicate potential future dumping risks if not adequately addressed through policy changes.",
         "gemini_response": {
             "verdict": "Unverifiable",
-            "confidence": 0.65,
-            "conclusion": "While India may be taking steps to limit Chinese imports, there is no verifiable statement or policy directly attributed to the Commerce Secretary explicitly aiming to \"throttle China's strategy.\" The claim lacks specific, attributable evidence.",
-            "evidence_summary": "No direct statements or policies from India's Commerce Secretary confirm efforts to \"throttle\" China's strategy."
+            "confidence": 0.75,
+            "conclusion": "The claim lacks concrete evidence of a planned policy. While increased imports and trade disputes exist, they don't confirm a systematic \"dumping\" strategy. Therefore, the claim remains speculative and unverifiable without further evidence.",
+            "evidence_summary": "No evidence of a planned dumping policy, only isolated investigations and trade disputes."
         },
         "tavily_sources": [
             {
-                "title": "India is dependent on China for electronic components. Now it's trying to change that - CNBC",
-                "url": "https://www.cnbc.com/2025/10/29/india-is-dependent-on-china-for-electronic-components-now-its-trying-to-change-that-.html",
-                "score": 0.25,
-                "snippet": "A case in point is Apple whose exports from India rose 42% year on year to $12.8 billion in 2024 and the company is shifting more production to India as it moves away from China. In the quarter ended September 2025, India overtook China to become the top smartphone exporter to the U.S., with a 240% ..."
+                "title": "Chemical evidence for the spread of lac colorant in Xinjiang from the 2nd to 9th centuries CE | npj Heritage Science - Nature",
+                "url": "https://www.nature.com/articles/s40494-025-02116-9",
+                "score": 0.12,
+                "snippet": "Trade routes connecting India and China, and passing through Xinjiang, were established during the Han Dynasty, promoting the circulation of a wealth of products along the Silk Roads, namely Indian cotton and Chinese silk38.\"). Indeed, cotton cloth imprinted with an Indian Buddhist design has been f..."
             },
             {
-                "title": "How hard will Trump’s ‘tremendous’ Russian oil sanctions hurt Moscow? China and India may decide - CNN",
-                "url": "https://www.cnn.com/2025/10/28/energy/us-russian-oil-sanctions-china-india-intl-hnk-dst",
+                "title": "Zhihua Ye: China’s export controls are proper reactions to discriminatory U.S. actions - Chicago Tribune",
+                "url": "https://www.chicagotribune.com/2025/10/27/opinion-china-us-donald-trump-xi-jinping-tariffs-exports/",
                 "score": 0.11,
-                "snippet": "“India is in a tougher spot,” according to Clayton Seigle, the energy and geopolitics chair at the Centre for Strategic and International Studies, because China’s market is more opaque and its firms are less afraid of being blacklisted by Washington.\n\n“In short, (India) got hooked on discounted Russ..."
-            },
-            {
-                "title": "China’s rare earth export delay offers US a chance to weaken Beijing’s grip on the market - AP News",
-                "url": "https://apnews.com/article/china-trade-war-rare-earths-trump-restrictions-5daa16fa0fb59d9633df7ebb14901cad",
-                "score": 0.1,
-                "snippet": "The Associated Press is an independent global news organization dedicated to factual reporting. Founded in 1846, AP today remains the most trusted source of fast, accurate, unbiased news in all formats and the essential provider of the technology and services vital to the news business. More than ha..."
+                "snippet": "Digging deeper, we can see that China’s moves are quite reasonable compared with the frequent sanctions and controls imposed by the U.S. government. [...] violated by some U.S. officials. [...] numerous rounds of engagement, U.S. officials should clearly realize that they should not underestimate Ch..."
             },
             {
                 "title": "EU, China to continue engagement on export controls, EU says - Reuters",
                 "url": "https://www.reuters.com/world/china/eu-china-continue-engagement-export-controls-eu-says-2025-11-01/",
-                "score": 0.07,
-                "snippet": "Image 20Image 21Image 22Image 23Image 24Image 25Image 26Image 27Image 28Image 29Image 30Image 31 [...] The officials held talks in a bid to smooth trade tensions, notably over China's expansion of its controls over rare earth exports. Beijing has now agreed to pause that expansion for a year.\n\nThe R..."
+                "score": 0.09,
+                "snippet": "Reuters, the news and media division of Thomson Reuters, is the world’s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, in..."
             },
             {
-                "title": "Robot dogs and AI drone swarms: How China could use DeepSeek for an era of war - Reuters",
-                "url": "https://www.reuters.com/world/asia-pacific/robot-dogs-ai-drone-swarms-how-china-could-use-deepseek-an-era-war-2025-10-27/",
-                "score": 0.07,
-                "snippet": "Such a task would have taken a conventional team of military planners 48 hours to complete, they said.\n\nReuters could not independently verify the researchers' claims.\n\nAUTONOMOUS WEAPONS\n\nChinese military entities are investing in increasingly autonomous battlefield technology, the documents sugges..."
+                "title": "China Reacts to Trump’s Nuclear Weapons Tests Order - Newsweek",
+                "url": "https://www.newsweek.com/china-reacts-to-trumps-nuclear-weapons-tests-order-10963843",
+                "score": 0.09,
+                "snippet": "WorldChina and Russia Push India Out of Air Base in Backyard: Reports\n\n3 min read\n\nU.S.Microsoft Outlook, Minecraft and Xbox Cloud Gaming Down\n\n4 min read\n\nWorldOver 460 Executed in Cold-Blooded Atrocity at Sudan Hospital: Report\n\n5 min read\n\n## Related Podcasts\n\n## Top Stories\n\nNewsHurricane Meliss..."
             },
             {
-                "title": "Bessent says China to delay rare earths rules by a year, buy U.S. soybeans - Reuters",
-                "url": "https://www.reuters.com/world/china/bessent-says-china-delay-rare-earths-rules-by-year-buy-us-soybeans-2025-10-26/",
-                "score": 0.07,
-                "snippet": "Image 19Image 20Image 21Image 22Image 23Image 24Image 25Image 26Image 27Image 28Image 29Image 30 [...] Reuters, the news and media division of Thomson Reuters, is the world’s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, nati..."
+                "title": "China, South Korea sign agreements including currency swap, Seoul says - TradingView",
+                "url": "https://www.tradingview.com/news/reuters.com,2025:newsml_P8N3W904F:0-china-south-korea-sign-agreements-including-currency-swap-seoul-says/",
+                "score": 0.09,
+                "snippet": "Reuters India collects $1.96 trln rupees in goods and services tax in OctoberReuters Indian temple stampede kills nine, injures several Image 18 Reuters Kia America Says 69,002 Units Sold In OctoberReuters Istanbul consumer price index rises 3.31% m/m in October, chamber saysReuters Scientists try t..."
+            },
+            {
+                "title": "The US Is Losing The Trade War With China - CleanTechnica",
+                "url": "https://cleantechnica.com/2025/10/30/the-us-is-losing-the-trade-war-with-china/",
+                "score": 0.09,
+                "snippet": "Krugman’s analysis suggests all the blather about tariffs obscures what is really happening behind the scenes. To score a few political points, the Fat Felon and his friends have blown up whatever moral high ground the US could still lay claim to prior to January of this year.\n\nPatrick Wintour, dipl..."
             }
         ],
-        "final_conclusion": "While India may be taking steps to limit Chinese imports, there is no verifiable statement or policy directly attributed to the Commerce Secretary explicitly aiming to \"throttle China's strategy.\" The claim lacks specific, attributable evidence.",
-        "confidence": 0.65
+        "final_conclusion": "The claim lacks concrete evidence of a planned policy. While increased imports and trade disputes exist, they don't confirm a systematic \"dumping\" strategy. Therefore, the claim remains speculative and unverifiable without further evidence.",
+        "confidence": 0.75
+    },
+    "claim2": {
+        "claim": "The Commerce Secretary will throttle China's strategy.",
+        "deepseek_response": ": Unverifiable  \nReasoning: No official statement or policy document explicitly says the U.S. (or any) Commerce Secretary will “throttle China’s strategy.” Media reports mention the Commerce Department’s actions on Chinese tech and trade, but they do not confirm a declared intent to “throttle” China’s overall strategy.  \nSources: U.S. Department of Commerce press releases (2024); Reuters coverage of U.S. China trade policy.",
+        "llama_response": "Critique: While the opponent correctly points out a lack of explicit statement, it's feasible the Commerce Secretary's actions could be interpreted as an attempt to \"throttle\" China's strategy, suggesting a possible disconnect between stated intent and perceived outcomes.",
+        "gemini_response": {
+            "verdict": "Unverifiable",
+            "confidence": 0.75,
+            "conclusion": "The claim uses the subjective term \"throttle,\" which is not explicitly supported by official statements or policy. While actions may have that effect, the absence of a declared intent makes the claim unverifiable.",
+            "evidence_summary": "No official statement confirms intent to \"throttle\" China's strategy, only actions with potential impact."
+        },
+        "tavily_sources": [
+            {
+                "title": "TREY GOWDY: China is misjudging Trump on trade. It may soon be very surprised - Fox News",
+                "url": "https://www.foxnews.com/opinion/trey-gowdy-china-misjudging-trump-trade-may-soon-surprised",
+                "score": 0.15,
+                "snippet": "China perceives time and our democratic system as allies in its strategy. The key is to make Beijing recognize Trump’s impatience with that country’s malingering and duplicity is not a weakness but rather a threat to their own interests.\n\nThe administration’s China pressure strategy isn’t confined t..."
+            },
+            {
+                "title": "Zhihua Ye: China’s export controls are proper reactions to discriminatory U.S. actions - Chicago Tribune",
+                "url": "https://www.chicagotribune.com/2025/10/27/opinion-china-us-donald-trump-xi-jinping-tariffs-exports/",
+                "score": 0.13,
+                "snippet": "Actions continue even during the federal government shutdown. On Oct. 7, the United States trade representative announced new special port-service fees on Chinese vessel operators and owners and Chinese-built ships. Starting Oct. 14, the baseline per-net-ton rate alone has risen.\n\nThings went full t..."
+            },
+            {
+                "title": "The US Is Losing The Trade War With China - CleanTechnica",
+                "url": "https://cleantechnica.com/2025/10/30/the-us-is-losing-the-trade-war-with-china/",
+                "score": 0.13,
+                "snippet": "“Over the past six months, both sides have learned about the other’s leverage and vulnerabilities, including which trade weapons work best. [...] upper hand, and it played it. [...] “Equally importantly, China hopes it will be seen by other countries as the responsible and restrained global power no..."
+            },
+            {
+                "title": "China's rare earth limits may have 'gone too far this time' as US trade talks start - Fortune",
+                "url": "https://fortune.com/2025/10/25/china-rare-earth-limits-us-trade-talks-trump-xi-jinping-global-backlash/",
+                "score": 0.12,
+                "snippet": "For its part, China has blasted U.S. efforts to limit software and chip exports, while also shifting trade toward other countries to offset the plunge in exports to America.\n\n“Yet Xi’s latest trade war tactic may be tipping the geostrategic balance back toward the US as companies around the world th..."
+            },
+            {
+                "title": "Top Chinese and U.S. economic officials on Sunday hashed out the framework of a trade deal for U.S. President Donald Trump and Chinese President Xi Jinping to decide on later this week that would pause steeper American tariffs and Chinese rare earths ex - facebook.com",
+                "url": "https://www.facebook.com/officialbenshapiro/posts/top-chinese-and-us-economic-officials-on-sunday-hashed-out-the-framework-of-a-tr/1555438219270810/",
+                "score": 0.1,
+                "snippet": "Trump's fantasy is what is being dispersed out to the media again. Can't wait for China to come out and say they have no clue what TACO boy is talking about.\n\n 27m\n\nBrent Wels\n\n 1h\n\n3\n\nTop fan\n\nRick Borsato\n\nWon't last long\n\n 2h\n\nTom Bedford\n\nChina is one of the least trustworthy trade partners we h..."
+            },
+            {
+                "title": "Could Carney attempt a reset on trade with China at APEC? - Automotive World",
+                "url": "https://www.automotiveworld.com/uncategorised/could-carney-attempt-a-reset-on-trade-with-china-at-apec/",
+                "score": 0.1,
+                "snippet": "Chinese media reports picked up by CnEVPost have suggested that Ottawa may even consider eliminating the 100% tariff on imports of China-made electric vehicles (EVs) as Carney pursues strategic engagement with Beijing. While the reporting has not been substantiated by any international outlets, a re..."
+            }
+        ],
+        "final_conclusion": "The claim uses the subjective term \"throttle,\" which is not explicitly supported by official statements or policy. While actions may have that effect, the absence of a declared intent makes the claim unverifiable.",
+        "confidence": 0.75
     }
 }
