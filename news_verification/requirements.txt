@@ -32,3 +32,9 @@ Flask
 Werkzeug
 Flask-Cors
 
+torch
+torchvision
+transformers
+Pillow
+tqdm           # optional: for progress bars
+numpy          # often useful with PyTorch
