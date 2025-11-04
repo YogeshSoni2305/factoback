@@ -188,7 +188,7 @@ import os
 from pathlib import Path
 
 # Import the FakeImageDetector class
-from deepfake import FakeImageDetector
+# from deepfake import FakeImageDetector
 
 
 class Description:
@@ -338,11 +338,11 @@ class Description:
                     print("✅ Image description extracted")
 
                     # Call deepfake detector
-                    fake_results = self.fake_image_detector.predict(value)
-                    image_name = Path(value).name
-                    if image_name in fake_results:
-                        responses['fake_probability'] = fake_results[image_name]
-                        print(f"✅ Deepfake detection for {image_name} completed.")
+                    # fake_results = self.fake_image_detector.predict(value)
+                    # image_name = Path(value).name
+                    # if image_name in fake_results:
+                    #     responses['fake_probability'] = fake_results[image_name]
+                    #     print(f"✅ Deepfake detection for {image_name} completed.")
 
                 elif key == "video":
                     video_result = self._extract_video_description_vision(value)
