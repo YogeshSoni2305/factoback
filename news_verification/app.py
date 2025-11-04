@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, request, jsonify
 import os
+from flask_cors import CORS
 import json
 from werkzeug.utils import secure_filename
 from fighter import ClaimFighter
@@ -12,6 +13,7 @@ from config import (
 )
 
 app = Flask(__name__, static_folder=FLASK_STATIC_FOLDER)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = FLASK_UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
 
