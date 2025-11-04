@@ -199,7 +199,7 @@ class Description:
         API_KEY=os.getenv("API_KEY")
         
         # Instantiate the FakeImageDetector
-        self.fake_image_detector = FakeImageDetector(fast=True)
+        # self.fake_image_detector = FakeImageDetector(fast=True)
 
     # ===============================
     # 🖼️ IMAGE DESCRIPTION (Gemini)
